@@ -21,7 +21,12 @@ class MyApp extends StatelessWidget {
             ),
             centerTitle: true,
             backgroundColor: Colors.green,
-            leading: Icon(Icons.filter)),
+             leading:IconButton(onPressed: null, iconSize: 30,icon: Icon(Icons.filter_alt_outlined, color: Colors.white,)),
+            actions: [  
+            IconButton(onPressed: null, iconSize: 30,icon: Icon(Icons.search_outlined, color: Colors.white,)),
+            IconButton(onPressed: null, iconSize: 30,icon: Icon(Icons.notifications_none_outlined, color: Colors.white,)), 
+          ]
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -61,7 +66,7 @@ class MyApp extends StatelessWidget {
                                 height: 100,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(80)
+                                  shape: BoxShape.circle
                                 ),
                                 child: Icon(Icons.home, size: 50, color: Colors.grey[400],)
                               ),
@@ -82,7 +87,7 @@ class MyApp extends StatelessWidget {
                                 height: 100,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(80)
+                                  shape: BoxShape.circle
                                 ),
                                 child: Icon(Icons.shopping_cart, size: 50, color: Colors.grey[400],)
                               ),
@@ -104,7 +109,7 @@ class MyApp extends StatelessWidget {
                                 height: 100,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(80)
+                                  shape: BoxShape.circle
                                 ),
                                 child: Icon(Icons.picture_in_picture, size: 50, color: Colors.grey[400],)
                               ),
@@ -126,7 +131,7 @@ class MyApp extends StatelessWidget {
                                 height: 100,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(80)
+                                  shape: BoxShape.circle
                                 ),
                                 child: Icon(Icons.location_city, size: 50, color: Colors.grey[400],)
                               ),
@@ -183,7 +188,7 @@ class MyApp extends StatelessWidget {
                                   Positioned(
                                     bottom: 5,
                                     right: 5,
-                                    child: Icon(Icons.heart_broken_sharp, color: Colors.green,),
+                                    child: Icon(Icons.favorite_outline, color: Colors.green,),
                                   )
                                 ],)
                               ),
@@ -229,7 +234,7 @@ class MyApp extends StatelessWidget {
                                   Positioned(
                                     bottom: 5,
                                     right: 5,
-                                    child: Icon(Icons.heart_broken_sharp, color: Colors.green,),
+                                    child: Icon(Icons.favorite_outline, color: Colors.green,),
                                   )
                                 ],)
                               ),
@@ -274,7 +279,7 @@ class MyApp extends StatelessWidget {
                                   Positioned(
                                     bottom: 5,
                                     right: 5,
-                                    child: Icon(Icons.heart_broken_sharp, color: Colors.green,),
+                                    child: Icon(Icons.favorite_outline, color: Colors.green,),
                                   )
                                 ],)
                               ),
@@ -345,7 +350,7 @@ class MyApp extends StatelessWidget {
                                   Positioned(
                                     bottom: 5,
                                     right: 5,
-                                    child: Icon(Icons.heart_broken_sharp, color: Colors.green,),
+                                    child: Icon(Icons.favorite_outline, color: Colors.green,),
                                   )
                                 ],)
                               ),
@@ -391,7 +396,7 @@ class MyApp extends StatelessWidget {
                                   Positioned(
                                     bottom: 5,
                                     right: 5,
-                                    child: Icon(Icons.heart_broken_sharp, color: Colors.green,),
+                                    child: Icon(Icons.favorite_outline, color: Colors.green,),
                                   )
                                 ],)
                               ),
@@ -436,7 +441,7 @@ class MyApp extends StatelessWidget {
                                   Positioned(
                                     bottom: 5,
                                     right: 5,
-                                    child: Icon(Icons.heart_broken_sharp, color: Colors.green,),
+                                    child: Icon(Icons.favorite_outline, color: Colors.green,),
                                   )
                                 ],)
                               ),
@@ -468,27 +473,30 @@ class MyApp extends StatelessWidget {
           ]),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.green[400],
+          unselectedItemColor: Colors.grey,
           backgroundColor: Colors.white,
           items: [
           BottomNavigationBarItem(
             label: 'Store',
-            icon: Icon(Icons.shopping_cart, color:Colors.green)
+            icon: Icon(Icons.store_outlined)
           ),
           BottomNavigationBarItem(
             label: 'My cart',
-            icon: Icon(Icons.card_travel, color: Colors.green)
+            icon: Icon(Icons.shopping_bag_outlined)
           ),
           BottomNavigationBarItem(
             label: 'Favcurious',
-            icon: Icon(Icons.heart_broken_sharp, color: Colors.green)
+            icon: Icon(Icons.favorite_outline)
           ),
           BottomNavigationBarItem(
             label: 'Profile',
-            icon: Icon(Icons.verified_user,color: Colors.green)
+            icon: Icon(Icons.person_outline)
           ),
           BottomNavigationBarItem(
             label: 'More',
-            icon: Icon(Icons.school, color: Colors.green),
+            icon: Icon(Icons.more_outlined),
           )
         ],
         ),
